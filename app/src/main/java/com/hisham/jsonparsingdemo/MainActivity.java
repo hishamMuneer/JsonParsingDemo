@@ -4,20 +4,20 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.hisham.jsonparsingdemo.models.MovieModel;
@@ -30,7 +30,6 @@ import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -72,8 +71,8 @@ public class MainActivity extends ActionBarActivity {
 
         lvMovies = (ListView)findViewById(R.id.lvMovies);
 
+        // To start fetching the data when app start, uncomment below line to start the async task.
 //                new JSONTask().execute("http://jsonparsing.parseapp.com/jsonData/moviesDemoList.txt");
-//                new JSONTask().execute("http://jsonparsing.parseapp.com/jsonData/moviesDemoItem.txt");
     }
 
     public class JSONTask extends AsyncTask<String,String, List<MovieModel> >{
@@ -111,6 +110,9 @@ public class MainActivity extends ActionBarActivity {
                 Gson gson = new Gson();
                 for(int i=0; i<parentArray.length(); i++) {
                     JSONObject finalObject = parentArray.getJSONObject(i);
+                    /**
+                     * below single line of code from Gson saves you from writing the json parsing yourself which is commented below
+                      */
                     MovieModel movieModel = gson.fromJson(finalObject.toString(), MovieModel.class);
 //                    movieModel.setMovie(finalObject.getString("movie"));
 //                    movieModel.setYear(finalObject.getInt("year"));
@@ -159,9 +161,12 @@ public class MainActivity extends ActionBarActivity {
         protected void onPostExecute(List<MovieModel> result) {
             super.onPostExecute(result);
             dialog.dismiss();
-            MovieAdapter adapter = new MovieAdapter(getApplicationContext(), R.layout.row, result);
-            lvMovies.setAdapter(adapter);
-            // TODO need to set data to the list
+            if(result != null) {
+                MovieAdapter adapter = new MovieAdapter(getApplicationContext(), R.layout.row, result);
+                lvMovies.setAdapter(adapter);
+            } else {
+                Toast.makeText(getApplicationContext(), "Not able to fetch data from server, please check url.", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
@@ -273,11 +278,7 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_refresh) {
             new JSONTask().execute("http://jsonparsing.parseapp.com/jsonData/moviesData.txt");
