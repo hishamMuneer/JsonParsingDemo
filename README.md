@@ -3,5 +3,5 @@ A simple demo for custom listview and json parsing and image caching.
 
 You can watch the following tutorial to completely understand the json parsing: https://www.youtube.com/embed/frltqnSKqiA?list=PLgjt1h_kabFebUn1anGYZ6_Tfkw64Ww12
 
-![JSON parsing final image 1](https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http://3.bp.blogspot.com/-8juj-F1tXTM/Ve8oRG5wVQI/AAAAAAAAQNI/OlusWZl1YJE/s400/Screenshot_2015-09-08-23-54-21.png&container=blogger&gadget=a&rewriteMime=image/*)
-![JSON parsing final image 2](https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http://4.bp.blogspot.com/-AZnfdEOW9-o/Ve8oShpx_WI/AAAAAAAAQNM/1DKZ4jbTulw/s400/Screenshot_2015-09-08-23-54-30.png&container=blogger&gadget=a&rewriteMime=image/*)
+![screenshot_2016-03-31-12-42-04](https://cloud.githubusercontent.com/assets/3941245/14168246/d98af7c2-f73e-11e5-8cd0-e7898a114ab5.png)
+![screenshot_2016-03-31-12-43-58](https://cloud.githubusercontent.com/assets/3941245/14168247/d9ebdc04-f73e-11e5-93b3-c0e1fed2191d.png)
