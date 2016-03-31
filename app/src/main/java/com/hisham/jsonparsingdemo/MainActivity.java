@@ -2,6 +2,7 @@ package com.hisham.jsonparsingdemo;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -43,6 +45,7 @@ import java.util.List;
 
 public class MainActivity extends ActionBarActivity {
 
+    private final String URL_TO_HIT = "http://jsonparsing.parseapp.com/jsonData/moviesData.txt";
     private TextView tvData;
     private ListView lvMovies;
     private ProgressDialog dialog;
@@ -71,8 +74,9 @@ public class MainActivity extends ActionBarActivity {
 
         lvMovies = (ListView)findViewById(R.id.lvMovies);
 
+
         // To start fetching the data when app start, uncomment below line to start the async task.
-//                new JSONTask().execute("http://jsonparsing.parseapp.com/jsonData/moviesDemoList.txt");
+                new JSONTask().execute(URL_TO_HIT);
     }
 
     public class JSONTask extends AsyncTask<String,String, List<MovieModel> >{
@@ -158,12 +162,21 @@ public class MainActivity extends ActionBarActivity {
         }
 
         @Override
-        protected void onPostExecute(List<MovieModel> result) {
+        protected void onPostExecute(final List<MovieModel> result) {
             super.onPostExecute(result);
             dialog.dismiss();
             if(result != null) {
                 MovieAdapter adapter = new MovieAdapter(getApplicationContext(), R.layout.row, result);
                 lvMovies.setAdapter(adapter);
+                lvMovies.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        MovieModel movieModel = result.get(position);
+                        Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                        intent.putExtra("movieModel", new Gson().toJson(movieModel));
+                        startActivity(intent);
+                    }
+                });
             } else {
                 Toast.makeText(getApplicationContext(), "Not able to fetch data from server, please check url.", Toast.LENGTH_SHORT).show();
             }
@@ -205,9 +218,6 @@ public class MainActivity extends ActionBarActivity {
             } else {
                 holder = (ViewHolder) convertView.getTag();
             }
-
-
-
 
             final ProgressBar progressBar = (ProgressBar)convertView.findViewById(R.id.progressBar);
 
@@ -281,7 +291,7 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_refresh) {
-            new JSONTask().execute("http://jsonparsing.parseapp.com/jsonData/moviesData.txt");
+            new JSONTask().execute(URL_TO_HIT);
             return true;
         }
 
