@@ -45,7 +45,7 @@ import java.util.List;
 
 public class MainActivity extends ActionBarActivity {
 
-    private final String URL_TO_HIT = "http://jsonparsing.parseapp.com/jsonData/moviesData.txt";
+    private final String URL_TO_HIT = "https://jsonparsingdemo-cec5b.firebaseapp.com/jsonData/moviesData.txt";
     private TextView tvData;
     private ListView lvMovies;
     private ProgressDialog dialog;
@@ -60,7 +60,7 @@ public class MainActivity extends ActionBarActivity {
         dialog = new ProgressDialog(this);
         dialog.setIndeterminate(true);
         dialog.setCancelable(false);
-        dialog.setMessage("Loading. Please wait...");
+        dialog.setMessage("Loading. Please wait..."); // showing a dialog for loading the data
         // Create default options which will be used for every
         //  displayImage(...) call if no options will be passed to this method
         DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder()
@@ -115,9 +115,10 @@ public class MainActivity extends ActionBarActivity {
                 for(int i=0; i<parentArray.length(); i++) {
                     JSONObject finalObject = parentArray.getJSONObject(i);
                     /**
-                     * below single line of code from Gson saves you from writing the json parsing yourself which is commented below
+                     * below single line of code from Gson saves you from writing the json parsing yourself
+                     * which is commented below
                       */
-                    MovieModel movieModel = gson.fromJson(finalObject.toString(), MovieModel.class);
+                    MovieModel movieModel = gson.fromJson(finalObject.toString(), MovieModel.class); // a single line json parsing using Gson
 //                    movieModel.setMovie(finalObject.getString("movie"));
 //                    movieModel.setYear(finalObject.getInt("year"));
 //                    movieModel.setRating((float) finalObject.getDouble("rating"));
@@ -168,12 +169,12 @@ public class MainActivity extends ActionBarActivity {
             if(result != null) {
                 MovieAdapter adapter = new MovieAdapter(getApplicationContext(), R.layout.row, result);
                 lvMovies.setAdapter(adapter);
-                lvMovies.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                lvMovies.setOnItemClickListener(new AdapterView.OnItemClickListener() {  // list item click opens a new detailed activity
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        MovieModel movieModel = result.get(position);
+                        MovieModel movieModel = result.get(position); // getting the model
                         Intent intent = new Intent(MainActivity.this, DetailActivity.class);
-                        intent.putExtra("movieModel", new Gson().toJson(movieModel));
+                        intent.putExtra("movieModel", new Gson().toJson(movieModel)); // converting model json into string type and sending it via intent
                         startActivity(intent);
                     }
                 });
@@ -222,25 +223,30 @@ public class MainActivity extends ActionBarActivity {
             final ProgressBar progressBar = (ProgressBar)convertView.findViewById(R.id.progressBar);
 
             // Then later, when you want to display image
+            final ViewHolder finalHolder = holder;
             ImageLoader.getInstance().displayImage(movieModelList.get(position).getImage(), holder.ivMovieIcon, new ImageLoadingListener() {
                 @Override
                 public void onLoadingStarted(String imageUri, View view) {
                     progressBar.setVisibility(View.VISIBLE);
+                    finalHolder.ivMovieIcon.setVisibility(View.INVISIBLE);
                 }
 
                 @Override
                 public void onLoadingFailed(String imageUri, View view, FailReason failReason) {
                     progressBar.setVisibility(View.GONE);
+                    finalHolder.ivMovieIcon.setVisibility(View.INVISIBLE);
                 }
 
                 @Override
                 public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
                     progressBar.setVisibility(View.GONE);
+                    finalHolder.ivMovieIcon.setVisibility(View.VISIBLE);
                 }
 
                 @Override
                 public void onLoadingCancelled(String imageUri, View view) {
                     progressBar.setVisibility(View.GONE);
+                    finalHolder.ivMovieIcon.setVisibility(View.INVISIBLE);
                 }
             });
 

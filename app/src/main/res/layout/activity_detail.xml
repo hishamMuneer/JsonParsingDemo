@@ -23,7 +23,7 @@
                 <ImageView
                     android:id="@+id/ivIcon"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="400dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/avengers" />
 
@@ -45,7 +45,8 @@
             android:padding="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:background="@drawable/rounded_bg">
+            >
+            <!--android:background="@drawable/rounded_bg"-->
 
             <RatingBar
                 android:id="@+id/rbMovie"

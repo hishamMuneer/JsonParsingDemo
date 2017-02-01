@@ -46,7 +46,7 @@ public class DetailActivity extends ActionBarActivity {
         // recovering data from MainActivity, sent via intent
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
-            String json = bundle.getString("movieModel");
+            String json = bundle.getString("movieModel"); // getting the model from MainActivity send via extras
             MovieModel movieModel = new Gson().fromJson(json, MovieModel.class);
 
             // Then later, when you want to display image
