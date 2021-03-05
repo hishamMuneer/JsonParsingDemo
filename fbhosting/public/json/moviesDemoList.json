@@ -1,0 +1,44 @@
+{
+  "movies": [
+    {
+      "movie": "Avengers",
+      "year": 2012
+    },
+    {
+      "movie": "Interstellar",
+      "year": 2014
+    },
+    {
+      "movie": "Fantastic Four",
+      "year": 2015
+    },
+    {
+      "movie": "The Dark Knight",
+      "year": 2008
+    },
+    {
+      "movie": "The Lord of the Rings: The Return of the King",
+      "year": 2003
+    },
+    {
+      "movie": "Life is Beautiful",
+      "year": 1997
+    },
+    {
+      "movie": "Gladiator",
+      "year": 2000
+    },
+    {
+      "movie": "The Lion King",
+      "year": 1994
+    },
+    {
+      "movie": "WALL-E",
+      "year": 2008
+    },
+    {
+      "movie": "Saving Private Ryan",
+      "year": 1998
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "movies": [
+    {
+      "movie": "Avengers",
+      "year": 2012,
+      "rating": 7.8,
+      "duration": "141 min",
+      "director": "Joss Whedon",
+      "tagline": "A new age begins",
+      "cast": [
+        {
+          "name": "Robert Downey Jr."
+        },
+        {
+          "name": "Chris Evans"
+        },
+        {
+          "name": "Mark Ruffalo"
+        }
+      ],
+      "image": "https://jsonparsingdemo-cec5b.firebaseapp.com/jsonData/images/avengers.jpg",
+      "story": "When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's Mightiest Heroes to stop the villainous Ultron from enacting his terrible plans."
+    },
+    {
+      "movie": "Interstellar",
+      "year": 2014,
+      "rating": 8.7,
+      "duration": "169 min",
+      "director": "Christopher Nolan",
+      "tagline": "Mankind was born on Earth. It was never meant to die here.",
+      "cast": [
+        {
+          "name": "Matthew McConaughey"
+        },
+        {
+          "name": "Anne Hathaway"
+        },
+        {
+          "name": "Jessica Chastain"
+        },
+        {
+          "name": "Wes Bentley"
+        }
+      ],
+      "image": "https://jsonparsingdemo-cec5b.firebaseapp.com/jsonData/images/interstellar.jpg",
+      "story": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival."
+    },
+	{
+      "movie": "Fantastic Four",
+      "year": 2015,
+      "rating": 4.0,
+      "duration": "100 min",
+      "director": "Josh Trank",
+      "tagline": "Change is coming.",
+      "cast": [
+        {
+          "name": "Miles Teller"
+        },
+        {
+          "name": "Kate Mara"
+        },
+        {
+          "name": "Michael B. Jordan"
+        }
+      ],
+      "image": "https://jsonparsingdemo-cec5b.firebaseapp.com/jsonData/images/f_four.jpg",
+      "story": "Four young outsiders teleport to an alternate and dangerous universe which alters their physical form in shocking ways. The four must learn to harness their new abilities and work together to save Earth from a former friend turned enemy."
+    },
+	{
+      "movie": "The Dark Knight",
+      "year": 2008,
+      "rating": 9.0,
+      "duration": "152 min",
+      "director": "Christopher Nolan",
+      "tagline": "Why So Serious?",
+      "cast": [
+        {
+          "name": "Christian Bale"
+        },
+        {
+          "name": "Heath Ledger"
+        },
+        {
+          "name": "Aaron Eckhart"
+        }
+      ],
+      "image": "https://jsonparsingdemo-cec5b.firebaseapp.com/jsonData/images/dark_knight.jpg",
+      "story": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice."
+    },
+    {
+      "movie": "The Lord of the Rings: The Return of the King",
+      "year": 2003,
+      "rating": 8.9,
+      "duration": "201 min",
+      "director": "Peter Jackson",
+      "tagline": "This Christmas the journey ends.",
+      "cast": [
+        {
+          "name": "Viggo Mortensen"
+        },
+        {
+          "name": "Ian McKellen"
+        },
+        {
+          "name": "Elijah Wood"
+        }
+      ],
+      "image": "https://jsonparsingdemo-cec5b.firebaseapp.com/jsonData/images/lotr.jpg",
+      "story": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring."
+    },
+    {
+      "movie": "Life Is Beautiful",
+      "year": 1997,
+      "rating": 8.6,
+      "duration": "116 min",
+      "director": "Roberto Benigni",
+      "tagline": "An unforgettable fable that proves love, family and imagination conquer all.",
+      "cast": [
+        {
+          "name": "Roberto Benigni"
+        },
+        {
+          "name": "Nicoletta Braschi"
+        },
+        {
+          "name": "Giorgio Cantarini"
+        }
+      ],
+      "image": "https://jsonparsingdemo-cec5b.firebaseapp.com/jsonData/images/life_is_beautiful.jpg",
+      "story": "When an open-minded Jewish librarian and his son become victims of the Holocaust, he uses a perfect mixture of will, humor and imagination to protect his son from the dangers around their camp."
+    },
+    {
+      "movie": "Gladiator",
+      "year": 2000,
+      "rating": 8.5,
+      "duration": "155 min",
+      "director": "Ridley Scott",
+      "tagline": "Father of a murdered son, husband to a murdered wife and I shall have my vengeance in this life or the next",
+      "cast": [
+        {
+          "name": "Russell Crowe"
+        },
+        {
+          "name": "Joaquin Phoenix"
+        },
+        {
+          "name": "Connie Nielsen"
+        },
+        {
+          "name": "Oliver Reed"
+        },
+        {
+          "name": "Tommy Flanagan"
+        }
+      ],
+      "image": "https://jsonparsingdemo-cec5b.firebaseapp.com/jsonData/images/gladiator.jpg",
+      "story": "When a Roman general is betrayed and his family murdered by an emperor's corrupt son, he comes to Rome as a gladiator to seek revenge."
+    },
+    {
+      "movie": "The Lion King",
+      "year": 1994,
+      "rating": 8.5,
+      "duration": "89 min",
+      "director": "Roger Allers",
+      "tagline": "The King Has Returned.",
+      "cast": [
+        {
+          "name": "James Earl Jones"
+        },
+        {
+          "name": "Jeremy Irons"
+        },
+        {
+          "name": "Matthew Broderick"
+        }
+      ],
+      "image": "https://jsonparsingdemo-cec5b.firebaseapp.com/jsonData/images/lion.jpg",
+      "story": "Lion cub and future king Simba searches for his identity. His eagerness to please others and penchant for testing his boundaries sometimes gets him into trouble."
+    },
+    {
+      "movie": "WALL-E",
+      "year": 2008,
+      "rating": 8.4,
+      "duration": "98 min",
+      "director": "Andrew Stanton",
+      "tagline": "He's got a lot of time on his hands.",
+      "cast": [
+        {
+          "name": "Ben Burtt"
+        },
+        {
+          "name": "Elissa Knight"
+        },
+        {
+          "name": "Jeff Garlin"
+        }
+      ],
+      "image": "https://jsonparsingdemo-cec5b.firebaseapp.com/jsonData/images/walle.jpg",
+      "story": "In the distant future, a small waste collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind."
+    },
+    {
+      "movie": "Saving Private Ryan",
+      "year": 1998,
+      "rating": 8.6,
+      "duration": "169 min",
+      "director": "Steven Spielberg",
+      "tagline": "There was only one man left in the family, and the mission was to save him",
+      "cast": [
+        {
+          "name": "Tom Hanks"
+        },
+        {
+          "name": "Matt Damon"
+        }
+      ],
+      "image": "https://jsonparsingdemo-cec5b.firebaseapp.com/jsonData/images/saving_private_ryan.jpg",
+      "story": "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action."
+    }   
+  ]
+}
