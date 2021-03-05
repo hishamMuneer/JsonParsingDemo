@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">JsonParsingDemo</string>
-
-    <string name="hello_world">Hello world!</string>
-    <string name="action_refresh">Refresh</string>
-    <string name="title_activity_detail">Detail Activity</string>
-</resources>
