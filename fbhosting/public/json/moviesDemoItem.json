@@ -2,7 +2,8 @@
   "movies": [
     {
       "movie": "Avengers",
-      "year": 2012
+      "year": 2012,
+	  "image": "http://ia.media-imdb.com/images/M/MV5BMTU4MDU3NDQ5Ml5BMl5BanBnXkFtZTgwOTU5MDUxNTE@._V1_SY317_CR1,0,214,317_AL_.jpg"
     }
   ]
 }

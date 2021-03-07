@@ -1,0 +1,21 @@
+{
+  "movie": "Avengers",
+  "year": 2012,
+  "rating": 7.8,
+  "duration": "141 min",
+  "director": "Joss Whedon",
+  "tagline": "A new age begins",
+  "cast": [
+    {
+      "name": "Robert Downey Jr."
+    },
+    {
+      "name": "Chris Evans"
+    },
+    {
+      "name": "Mark Ruffalo"
+    }
+  ],
+  "image": "https://jsonparsingdemo-cec5b.firebaseapp.com/jsonData/images/avengers.jpg",
+  "story": "When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's Mightiest Heroes to stop the villainous Ultron from enacting his terrible plans."
+}
