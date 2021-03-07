@@ -2,7 +2,8 @@
   "movies": [
     {
       "movie": "Avengers",
-      "year": 2012
+      "year": 2012,
+	  "image": "https://jsonparsingdemo-cec5b.firebaseapp.com/jsonData/images/avengers.jpg"
     }
   ]
 }
